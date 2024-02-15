@@ -83,6 +83,9 @@ function writeChoices(choices: Choice[], selectedIndex:number) {
 }
 
 function fuzzysearch(needle: string, haystack: string) {
+  needle = needle.toLowerCase()
+  haystack = haystack.toLowerCase()
+
   var hlen = haystack.length
   var nlen = needle.length
   if (nlen > hlen) {

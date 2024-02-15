@@ -1,12 +1,14 @@
 {
   "devDependencies": {
-    "@types/node": "^20.11.16"
+    "@types/node": "^20.11.16",
+    "esbuild": "0.20.0"
   },
   "name": "nprompt",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postbuild": "esbuild dist/prompt.js --bundle --platform=node --minify --outfile=out.js"
   },
   "keywords": [],
   "author": "",

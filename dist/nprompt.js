@@ -62,7 +62,7 @@ function autocomplete(data) {
                 else if (input !== '\u001b[A' && input !== '\u001b[B') {
                     userInput += input;
                 }
-                choices = data.choices.filter(({ title }) => fuzzysearch(userInput, title));
+                choices = data.choices.filter(({ title }) => fuzzysearch(userInput.toLowerCase(), title.toLowerCase()));
                 // Handle arrow keys
                 if (input == '\u001b[A') {
                     if (selectedIndex !== 0)
